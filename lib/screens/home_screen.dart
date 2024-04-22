@@ -17,9 +17,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 180, 94, 195),
+        backgroundColor: Colors.amber,
         centerTitle: true,
-        title: const Text('Hive Todo'),
+        title: const Text(
+          'Hive Todo',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       body: ValueListenableBuilder(
         valueListenable: todoBox.listenable(),
@@ -37,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
               itemBuilder: (context, index) {
                 Todo todo = box.getAt(index);
                 return ListTile(
+                  tileColor: const Color.fromARGB(255, 230, 222, 186),
                   title: Text(
                     todo.title,
                     style: TextStyle(
@@ -76,6 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
         },
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.amber,
         onPressed: () {
           Navigator.push(
             context,

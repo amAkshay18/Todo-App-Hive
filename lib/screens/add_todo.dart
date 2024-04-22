@@ -38,9 +38,17 @@ class AddTodo extends StatelessWidget {
                     Navigator.pop(context);
                   }
                 },
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.amber),
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)))),
                 child: const Text(
                   "Add Todo",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
